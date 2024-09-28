@@ -1,21 +1,28 @@
-MIT License
+# ThoughtLink_LLM - Conversational Chatbot with Chain of Thought Reasoning
 
-Copyright (c) 2024 Shloak Nioding
+**ThoughtLink_LLM** is a conversational chatbot built with **Gemini API**. It incorporates **chain-of-thought reasoning**, allowing it to think step-by-step and provide more contextually intelligent responses.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Table of Contents
+- [Features](#features)
+- [How It Works](#how-it-works)
+- [License](#license)
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Features
+- **Conversational AI**: Engages users in natural, human-like dialogue.
+- **Chain of Thought Reasoning**: The chatbot uses logical steps to enhance response accuracy and provide a deeper context.
+- **Gemini API Integration**: Built using the Gemini-flash API.
+- **Scalable and Customizable**: Easily extend to add new features or improve performance.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## How it Works
+- By default model loads in normal conversation mode.
+- When toggled to chain of thoughts, the model generates 'thinking' and 'preliminary' sections.
+- thinking : this section lets LLM think step-by-step to highlight steps involved in deriving answer.
+- preliminary : this section lets LLM build over ideas generated during 'thinking' process.
+- Then after model is called again asking it to generate final output for user.
+
+## License
+- This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+- Gemini API for providing the conversational model.
+
