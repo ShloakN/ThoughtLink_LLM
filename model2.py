@@ -30,8 +30,6 @@ class ChatBot:
         Consolidate your thoughts from previous section to give final answer for user's prompt. This part will be visible to user.\
         """
 
-        self.web_search_flag = False
-        self.summarize_data_flag = False
         self.start_chat_flag = False
         self.chat_obj = None
 
@@ -45,7 +43,6 @@ class ChatBot:
 
     def chat(self, prompt: str):
 
-        
         # Initial model setup          
         if not self.start_chat_flag:
             set_tone  = [self.base_tone, self.cot_tone]
